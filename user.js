@@ -54,9 +54,9 @@ export async function uploadFile(user_id, file_name) {
 }
 
 
-const result = await createUser('shahina', 'shuxratova@gmail.com');
+// const result = await createUser('shahina', 'shuxratova@gmail.com');
 
-console.log(result);
+// console.log(result);
 
 // const createUser = async (req, res, next) => {
 //     try {

@@ -35,7 +35,7 @@ app.post('/uploads', upload.single('file'), async (req, res) => {
     const fname = req.file.originalname
     console.log(fname)
 
-    const user_id = req.body
+    const {user_id} = req.body
 
     const file = await uploadFile(user_id, fname)
 
@@ -55,8 +55,8 @@ app.get('/user/:mail', async (req, res) => {
 })
 //file find
 
-app.get('/user/image/:img', async (req, res) => {
-    const file_name=req.params.img
+app.get('/user/file/:f', async (req, res) => {
+    const file_name=req.params.f
     const result = await findFile(file_name)
     res.send(result)
 })

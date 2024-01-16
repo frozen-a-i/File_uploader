@@ -8,7 +8,11 @@ CREATE TABLE users (
   -- img VARCHAR(255) NOT NULL,
 );
 
-INSERT INTO users (username, email,img)
+INSERT INTO users (username, email)
 VALUES 
 ('Frozen', 'frozen.ismoilova@gmail.com');
 
+CREATE TABLE `files` (
+  `user_id` int NOT NULL,
+  `file_name` varchar(1000) DEFAULT NULL
+) 
